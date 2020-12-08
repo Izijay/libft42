@@ -6,36 +6,56 @@
 /*   By: mdupuis <mdupuis@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/08 02:18:46 by mdupuis           #+#    #+#             */
-/*   Updated: 2020/12/08 12:45:05 by mdupuis          ###   ########.fr       */
+/*   Updated: 2020/12/08 18:26:15 by mdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int			ft_atoi(const char *str)
+static int	ft_check_atoi(const char *str, int *i)
 {
-	int			neg;
-	int			sig;
-	long		res;
+	int	sig;
+	int	neg;
 
-	res = 0;
-	neg = 1;
-	sig = 1;
-	while ((*str >= 9 && *str <= 13) || *str == 32)
-		str++;
-	while (*str == '-' || *str == '+')
+	sig = 0;
+	neg = 0;
+	while ((str[*i] >= 9 && str[*i] <= 13) || str[*i] == 32)
+		*i = *i + 1;
+	while (str[*i] == '-' || str[*i] == '+')
 	{
-		if (*str == '-')
-			neg = neg * -1;
-		str++;
+		if (str[*i] == '-')
+		{
+			sig++;
+			neg++;
+		}
+		else if (str[*i] == '+')
+			sig++;
+		*i = *i + 1;
 	}
-	while (*str && *str >= '0' && *str <= '9')
-	{
-		res = res * 10 + *str++ - 48;
-		if (res < 0 && neg == 1)
-			sig = -1;
-		else if (res < 0 && neg == -1)
-			sig = 0;
-	}
-	return (sig = 1 ? res * neg : sig);
+	if (sig > 1)
+		return (-1);
+	if (neg == 1)
+		return (1);
+	else
+		return (666);
 }
+
+int		ft_atoi(const char *str)
+{
+	long	res;
+	int		chk;
+	int		i;
+
+	i = 0;
+	res = 0;
+	chk = ft_check_atoi(str, &i);
+	str += i;
+	if (chk == -1)
+		return (0);
+	while (*str && (*str >= '0' && *str <= '9'))
+		res = res * 10 + *str++ - 48;
+	if (chk == 1)
+		res = -res;
+	return (res);
+}
+
