@@ -6,7 +6,7 @@
 /*   By: mdupuis <mdupuis@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/08 02:56:42 by mdupuis           #+#    #+#             */
-/*   Updated: 2020/12/08 14:45:36 by mdupuis          ###   ########.fr       */
+/*   Updated: 2020/12/08 21:47:55 by mdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,29 @@
 
 size_t			ft_strlcat(char *dest, const char *src, size_t size)
 {
-	size_t	i;
-	size_t	j;
-	size_t	len;
+	const char	*sr;
+	char		*dst;
+	size_t		n;
+	size_t		len;
 
-	i = 0;
-	j = 0;
-	len = ft_strlen(dest);
-	while (dest[i] && i < size)
-		i++;
-	while (src[j] && i < size - 1)
-		dest[i++] = src[j++];
-	if (size != 0 && size >= len)
-		dest[i] = '\0';
-	if (size < ft_strlen(dest))
-		return (ft_strlen(src) + size);
-	else
-		return (ft_strlen(src) + len);
+	dst = dest;
+	sr = src;
+	n = size;
+	while (n-- != 0 && *dst != '\0')
+		dst++;
+	len = dst - dest;
+	n = size - len;
+	if (n == 0)
+		return (len + ft_strlen(sr));
+	while (*sr != '\0')
+	{
+		if (n != 1)
+		{
+			*dst++ = *sr;
+			n--;
+		}
+		sr++;
+	}
+	*dst = '\0';
+	return (len + (sr - src));
 }
