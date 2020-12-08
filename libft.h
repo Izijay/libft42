@@ -6,7 +6,7 @@
 /*   By: mdupuis <mdupuis@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/08 12:11:26 by mdupuis           #+#    #+#             */
-/*   Updated: 2020/12/08 12:43:53 by mdupuis          ###   ########.fr       */
+/*   Updated: 2020/12/08 14:46:20 by mdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ void			*ft_memchr(const void *s, int c, size_t size);
 void			*ft_memset(void *str, int c, size_t count);
 void			*ft_memmove(void *dst, const void *src, size_t size);
 size_t			ft_strlen(const char *str);
-size_t			ft_strlcat(char *dest, char *src, size_t size);
+size_t			ft_strlcat(char *dest, const char *src, size_t size);
 size_t			ft_strlcpy(char *dest, char *src, size_t size);
 
 t_list			*ft_lstnew(void *content);
