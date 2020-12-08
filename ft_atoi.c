@@ -6,7 +6,7 @@
 /*   By: mdupuis <mdupuis@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/08 02:18:46 by mdupuis           #+#    #+#             */
-/*   Updated: 2020/12/08 02:23:08 by mdupuis          ###   ########.fr       */
+/*   Updated: 2020/12/08 12:45:05 by mdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int			ft_atoi(const char *str)
 {
-	int		neg;
-	int		sig;
+	int			neg;
+	int			sig;
 	long		res;
 
 	res = 0;

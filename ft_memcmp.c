@@ -6,7 +6,7 @@
 /*   By: mdupuis <mdupuis@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/08 02:44:38 by mdupuis           #+#    #+#             */
-/*   Updated: 2020/12/08 03:19:50 by mdupuis          ###   ########.fr       */
+/*   Updated: 2020/12/08 12:50:37 by mdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int			ft_memcmp(const void *s1, const void *s2, size_t size)
 {
-	size_t				i;
+	size_t					i;
 	const unsigned char		*mem_s1;
 	const unsigned char		*mem_s2;
 

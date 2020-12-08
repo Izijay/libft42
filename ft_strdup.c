@@ -6,7 +6,7 @@
 /*   By: mdupuis <mdupuis@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/08 02:54:45 by mdupuis           #+#    #+#             */
-/*   Updated: 2020/12/08 02:55:08 by mdupuis          ###   ########.fr       */
+/*   Updated: 2020/12/08 12:48:16 by mdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char		*ft_strdup(const char *str)
 {
 	char	*dest;
-	int	i;
+	int		i;
 
 	i = 0;
 	while (str[i])

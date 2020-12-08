@@ -6,7 +6,7 @@
 /*   By: mdupuis <mdupuis@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/08 02:55:41 by mdupuis           #+#    #+#             */
-/*   Updated: 2020/12/08 02:56:14 by mdupuis          ###   ########.fr       */
+/*   Updated: 2020/12/08 13:07:18 by mdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 char			*ft_strjoin(char const *s1, char const *s2)
 {
-	int		i;
 	unsigned int	len1;
 	unsigned int	len2;
-	char		*join;
+	char			*join;
+	int				i;
 
 	len1 = ft_strlen(s1);
 	len2 = ft_strlen(s2);

@@ -6,7 +6,7 @@
 /*   By: mdupuis <mdupuis@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/08 02:51:26 by mdupuis           #+#    #+#             */
-/*   Updated: 2020/12/08 03:21:57 by mdupuis          ###   ########.fr       */
+/*   Updated: 2020/12/08 13:14:42 by mdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ static int			ft_check_sp(char c, char sep)
 
 static int			ft_wordcount(char const *str, char c)
 {
-	int	i;
-	int	count;
+	int		i;
+	int		count;
 
 	i = 0;
 	count = 0;
@@ -39,7 +39,7 @@ static int			ft_wordcount(char const *str, char c)
 
 static void			ft_strcpy_sp(char *dest, char const *src, char c)
 {
-	int	i;
+	int		i;
 
 	i = 0;
 	while (ft_check_sp(src[i], c) == 0)
@@ -52,9 +52,9 @@ static void			ft_strcpy_sp(char *dest, char const *src, char c)
 
 static void			ft_mallocword(char **tab, char const *str, char c)
 {
-	int	i;
-	int	j;
-	int	count;
+	int		i;
+	int		j;
+	int		count;
 
 	i = 0;
 	count = 0;
@@ -76,9 +76,9 @@ static void			ft_mallocword(char **tab, char const *str, char c)
 	}
 }
 
-char			**ft_split(char const *str, char c)
+char				**ft_split(char const *str, char c)
 {
-	int	count;
+	int		count;
 	char	**tab;
 
 	count = ft_wordcount(str, c);

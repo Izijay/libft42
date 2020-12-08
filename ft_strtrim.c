@@ -6,13 +6,13 @@
 /*   By: mdupuis <mdupuis@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/08 03:02:52 by mdupuis           #+#    #+#             */
-/*   Updated: 2020/12/08 03:14:03 by mdupuis          ###   ########.fr       */
+/*   Updated: 2020/12/08 13:20:51 by mdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t		ft_check_tr(char c, const char *str)
+static size_t	ft_check_tr(char c, const char *str)
 {
 	int	i;
 
@@ -26,11 +26,11 @@ static size_t		ft_check_tr(char c, const char *str)
 	return (0);
 }
 
-char			*ft_strtrim(char const *s1, char const *set)
+char		*ft_strtrim(char const *s1, char const *set)
 {
-	char	*str;
 	size_t	i;
 	size_t	len;
+	char	*str;
 
 	i = 0;
 	if (!s1 || !set)

@@ -6,7 +6,7 @@
 /*   By: mdupuis <mdupuis@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/08 02:46:35 by mdupuis           #+#    #+#             */
-/*   Updated: 2020/12/08 02:46:58 by mdupuis          ###   ########.fr       */
+/*   Updated: 2020/12/08 12:50:56 by mdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void			*ft_memmove(void *dst, const void *src, size_t size)
 {
-	size_t		i;
+	size_t			i;
 	unsigned char	*mem_dst;
 	unsigned char	*mem_src;
 

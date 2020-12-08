@@ -6,7 +6,7 @@
 /*   By: mdupuis <mdupuis@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/08 02:31:34 by mdupuis           #+#    #+#             */
-/*   Updated: 2020/12/08 02:32:41 by mdupuis          ###   ########.fr       */
+/*   Updated: 2020/12/08 12:49:57 by mdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ static long		ft_nblen(long nbr)
 char			*ft_itoa(int nbr)
 {
 	char	*str;
-	int	len;
+	int		len;
 	long	nb;
 
 	nb = nbr;

@@ -6,7 +6,7 @@
 /*   By: mdupuis <mdupuis@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/08 02:42:42 by mdupuis           #+#    #+#             */
-/*   Updated: 2020/12/08 03:17:47 by mdupuis          ###   ########.fr       */
+/*   Updated: 2020/12/08 12:47:57 by mdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void		*ft_memccpy(void *dest, const void *src, int c, size_t max)
 {
 	unsigned char	*mem_dest;
 	unsigned char	*mem_src;
-	size_t		i;
+	size_t			i;
 
 	i = 0;
 	mem_dest = (unsigned char *)dest;

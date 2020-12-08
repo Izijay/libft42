@@ -6,7 +6,7 @@
 /*   By: mdupuis <mdupuis@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/08 02:59:07 by mdupuis           #+#    #+#             */
-/*   Updated: 2020/12/08 02:59:32 by mdupuis          ###   ########.fr       */
+/*   Updated: 2020/12/08 13:13:22 by mdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char		*str;
+	char			*str;
 	unsigned int	i;
 
 	i = 0;

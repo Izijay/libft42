@@ -6,7 +6,7 @@
 /*   By: mdupuis <mdupuis@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/08 02:43:41 by mdupuis           #+#    #+#             */
-/*   Updated: 2020/12/08 03:18:44 by mdupuis          ###   ########.fr       */
+/*   Updated: 2020/12/08 12:47:19 by mdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void			*ft_memchr(const void *s, int c, size_t size)
 {
-	size_t		i;
+	size_t			i;
 	unsigned char	*mem;
 
 	i = 0;
