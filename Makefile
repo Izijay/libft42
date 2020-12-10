@@ -6,7 +6,7 @@
 #    By: mdupuis <mdupuis@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/08 13:42:32 by mdupuis           #+#    #+#              #
-#    Updated: 2020/12/09 12:08:40 by mdupuis          ###   ########.fr        #
+#    Updated: 2020/12/10 12:51:45 by mdupuis          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,8 +53,7 @@ SRCS_BONUS = 		ft_lstnew.c\
 					ft_lstadd_back.c\
 					ft_lstdelone.c\
 					ft_lstclear.c\
-					ft_lstiter.c\
-					ft_lstmap.c
+					ft_lstiter.c
 
 HEAD = 				libft.h
 
