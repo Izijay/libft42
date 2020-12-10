@@ -6,7 +6,7 @@
 /*   By: mdupuis <mdupuis@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/08 02:49:02 by mdupuis           #+#    #+#             */
-/*   Updated: 2020/12/08 02:49:16 by mdupuis          ###   ########.fr       */
+/*   Updated: 2020/12/09 12:32:47 by mdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
+	if (!s)
+		return ;
 	ft_putstr_fd(s, fd);
 	write(fd, "\n", 1);
 }

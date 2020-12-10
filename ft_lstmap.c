@@ -6,7 +6,7 @@
 /*   By: mdupuis <mdupuis@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/08 02:39:53 by mdupuis           #+#    #+#             */
-/*   Updated: 2020/12/08 03:06:45 by mdupuis          ###   ########.fr       */
+/*   Updated: 2020/12/09 12:45:28 by mdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ t_list			*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list		*ret;
 
 	ret = NULL;
-	if (!lst || !f || !del)
+	if (!lst || !f)
 		return (NULL);
 	while (lst)
 	{

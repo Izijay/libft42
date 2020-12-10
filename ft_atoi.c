@@ -6,13 +6,13 @@
 /*   By: mdupuis <mdupuis@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/08 02:18:46 by mdupuis           #+#    #+#             */
-/*   Updated: 2020/12/08 21:31:12 by mdupuis          ###   ########.fr       */
+/*   Updated: 2020/12/09 11:49:46 by mdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_check_atoi(const char *str, int *i)
+static int		ft_check_atoi(const char *str, int *i)
 {
 	int	sig;
 
@@ -28,7 +28,7 @@ static int	ft_check_atoi(const char *str, int *i)
 	return (sig);
 }
 
-int		ft_atoi(const char *str)
+int				ft_atoi(const char *str)
 {
 	long	res;
 	int		sig;

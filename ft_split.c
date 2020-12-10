@@ -6,7 +6,7 @@
 /*   By: mdupuis <mdupuis@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/08 02:51:26 by mdupuis           #+#    #+#             */
-/*   Updated: 2020/12/08 13:14:42 by mdupuis          ###   ########.fr       */
+/*   Updated: 2020/12/09 12:27:08 by mdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ static void			ft_strcpy_sp(char *dest, char const *src, char c)
 	dest[i] = '\0';
 }
 
-static void			ft_mallocword(char **tab, char const *str, char c)
+static int			ft_mallocword(char **tab, char const *str, char c)
 {
 	int		i;
 	int		j;
@@ -68,12 +68,13 @@ static void			ft_mallocword(char **tab, char const *str, char c)
 			while (ft_check_sp(str[i + j], c) == 0)
 				j++;
 			if (!(tab[count] = (char *)malloc(sizeof(char) * (j + 1))))
-				return ;
+				return (1);
 			ft_strcpy_sp(tab[count], str + i, c);
 			i = i + j;
 			count++;
 		}
 	}
+	return (0);
 }
 
 char				**ft_split(char const *str, char c)
@@ -81,10 +82,16 @@ char				**ft_split(char const *str, char c)
 	int		count;
 	char	**tab;
 
+	if (!str)
+		return (NULL);
 	count = ft_wordcount(str, c);
 	if (!(tab = (char **)malloc(sizeof(char *) * (count + 1))))
 		return (NULL);
 	tab[count] = 0;
-	ft_mallocword(tab, str, c);
+	if (ft_mallocword(tab, str, c))
+	{
+		ft_free_tab2d(tab);
+		return (NULL);
+	}
 	return (tab);
 }

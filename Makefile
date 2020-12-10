@@ -6,7 +6,7 @@
 #    By: mdupuis <mdupuis@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/08 13:42:32 by mdupuis           #+#    #+#              #
-#    Updated: 2020/12/08 13:42:52 by mdupuis          ###   ########.fr        #
+#    Updated: 2020/12/09 12:08:40 by mdupuis          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,6 +43,7 @@ SRCS = 				ft_atoi.c\
 					ft_strtrim.c\
 					ft_substr.c\
 					ft_tolower.c\
+					ft_free_tab2d.c\
 					ft_toupper.c
 
 SRCS_BONUS = 		ft_lstnew.c\

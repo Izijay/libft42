@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_free_tab2d.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mdupuis <mdupuis@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mdupuis </var/mail/mdupuis>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/08 02:58:24 by mdupuis           #+#    #+#             */
-/*   Updated: 2020/12/09 11:56:10 by mdupuis          ###   ########.fr       */
+/*   Created: 2020/12/09 12:01:18 by mdupuis           #+#    #+#             */
+/*   Updated: 2020/12/09 12:04:53 by mdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t		ft_strlen(const char *str)
+void			ft_free_tab2d(char **tab)
 {
-	int	len;
+	int i;
 
-	len = 0;
-	while (str[len])
-		len++;
-	return (len);
+	i = 0;
+	while (tab[i])
+	{
+		free(tab[i]);
+		i++;
+	}
+	free(tab);
 }

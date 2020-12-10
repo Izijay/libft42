@@ -6,7 +6,7 @@
 /*   By: mdupuis <mdupuis@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/08 02:55:41 by mdupuis           #+#    #+#             */
-/*   Updated: 2020/12/08 13:07:18 by mdupuis          ###   ########.fr       */
+/*   Updated: 2020/12/09 11:52:41 by mdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@ char			*ft_strjoin(char const *s1, char const *s2)
 	char			*join;
 	int				i;
 
-	len1 = ft_strlen(s1);
-	len2 = ft_strlen(s2);
 	if (!s1 || !s2)
 		return (NULL);
+	len1 = ft_strlen(s1);
+	len2 = ft_strlen(s2);
 	if (!(join = (char *)malloc(sizeof(char) * (len1 + len2 + 1))))
 		return (NULL);
 	join[len1 + len2] = '\0';
